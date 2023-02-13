@@ -1,0 +1,40 @@
+﻿<Window x:Class="DI04_Tarea_Fernandez_Chacon_EnriqueOctavio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DI04_Tarea_Fernandez_Chacon_EnriqueOctavio"
+        mc:Ignorable="d"
+        IsVisibleChanged="VisibilidadChange"
+        Title="Gestión de Reservas - Enrique Fernández 2ºDAM" Height="520" Width="800">
+
+    <Grid>
+        <Menu Height="25" Margin="0,0,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3">
+            <MenuItem Header="Reservas" ToolTip="Menú de reservas" >
+                <MenuItem Header="Nuevo..." ToolTip="Crear nueva reserva" Click="MenuItem_Click_NuevaReserva"/>
+                <MenuItem Header="Salir" Click="MenuItem_Click_Salir" ToolTip="Salir del programa" />
+            </MenuItem>
+            <MenuItem Header="Clientes" ToolTip="Menú de clientes" >
+                <MenuItem Header="Anadir Cliente..." Click="MenuItem_AnadirCliente" ToolTip="Mostrar ventana para añadir un nuevo cliente" />
+            </MenuItem>
+            <MenuItem Header="Ayuda" ToolTip="Menú de ayuda" >
+                <MenuItem Header="Acerca De..." Click="MenuItem_ClickAcercaDe" ToolTip="Mostrar ventana con información de acerca de" />
+            </MenuItem>
+        </Menu>
+        <DataGrid x:Name="dgReservas" ToolTip="Listado de reservas" Margin="0,25,0,0" AutoGenerateColumns="False" CanUserAddRows="false" ItemsSource="{Binding}" RenderTransformOrigin="0.5,0.5" Height="400" VerticalAlignment="Top">
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.429"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-1.351"/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+        </DataGrid>
+        <Button Content="Borrar Reserva" ToolTip="Borrar la reserva seleccionada" HorizontalAlignment="Left" Click="BorrarReserva_Click" Width="120" Height="25" Margin="28,445,0,0" VerticalAlignment="Top"/>
+        <Button Content="Modificar Reserva" ToolTip="Modificar la reserva seleccionad" HorizontalAlignment="Left" Click="ModificarReserva_Click" Width="120" Height="25" Margin="192,445,0,0" VerticalAlignment="Top"/>
+        <Button Content="Reinciar Aplicacion" ToolTip="Reiniciar los datos de la aplicación" HorizontalAlignment="Left" Click="ReiniciarContenido" Width="120" Height="25" Margin="635,445,0,0" VerticalAlignment="Top"/>
+    </Grid>
+
+
+</Window>

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NEGOCIO\**" />
+    <Compile Remove="Patron de comprobacion\**" />
+    <EmbeddedResource Remove="NEGOCIO\**" />
+    <EmbeddedResource Remove="Patron de comprobacion\**" />
+    <None Remove="NEGOCIO\**" />
+    <None Remove="Patron de comprobacion\**" />
+    <Page Remove="NEGOCIO\**" />
+    <Page Remove="Patron de comprobacion\**" />
+  </ItemGroup>
+
+</Project>

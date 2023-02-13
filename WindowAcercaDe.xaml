@@ -1,0 +1,17 @@
+﻿<Window x:Class="DI04_Tarea_Fernandez_Chacon_EnriqueOctavio.WindowAcercaDe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DI04_Tarea_Fernandez_Chacon_EnriqueOctavio"
+        mc:Ignorable="d"
+        Closed="Window_Closed"
+        Title="WindowAcercaDe" Height="180" Width="250">
+    <Grid>
+        <Label Content="Tarea Online 2" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top"/>
+        <Label Content="Diseño de Interfaces" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top"/>
+        <Label Content="2º DAM" HorizontalAlignment="Center" Margin="0,80,0,0" VerticalAlignment="Top"/>
+        <Label Content="Enrique Octavio Fernandez Chacon" HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

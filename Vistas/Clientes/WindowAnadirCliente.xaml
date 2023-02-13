@@ -1,0 +1,45 @@
+﻿<Window x:Class="DI04_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes.WindowAnadirCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DI04_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes"
+        xmlns:uc="clr-namespace:DI04_Tarea_Fernandez_Chacon_EnriqueOctavio.Componentes"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Closed="Window_Closed"
+        Title="WindowAnadirCliente" Height="450" Width="800">
+    <Grid VerticalAlignment="Center"
+          >
+        <Grid.RowDefinitions >
+            <RowDefinition Height="Auto"  />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="LabelNombre" ToolTip="Nombre del cliente" Content="Nombre" Grid.Column="0" Grid.Row="0"/>
+        <TextBox x:Name="TextBoxNombre"  ToolTip="Introduzca el nombre del nuevo cliente" Width="200" Grid.Column="1" Grid.Row="0" Margin="20,0,0,0" Height="24"/>
+        <Label x:Name="LabelApellidos" ToolTip="Apellidos del cliente" Content="Apellidos" Grid.Column="0" Grid.Row="1" Margin="0,10,0,0"/>
+        <TextBox x:Name="TextBoxApellidos" ToolTip="Introduzca los apellidos del nuevo cliente" Width="200" Grid.Column="1" Grid.Row="1" Margin="20,0,0,0" Height="24"/>
+        <Label x:Name="LabelTelefono" ToolTip="Teléfono del cliente" Content="Teléfono" Grid.Column="0" Grid.Row="2" Margin="0,10,0,0"/>
+        <TextBox x:Name="TextBoxTelefono" ToolTip="Introduzca el teléfono del nuevo cliente" Width="200" Grid.Column="1" Grid.Row="2" Margin="20,0,0,0" Height="24"/>
+        <Label x:Name="LabelMail" ToolTip="Email del cliente" Content="Email" Grid.Column="0" Grid.Row="3" Margin="0,10,0,0"/>
+        <TextBox x:Name="TextBoxMail" ToolTip="Introduzca el email del nuevo cliente" Width="200" Grid.Column="1" Grid.Row="3" Margin="20,0,0,0" Height="24"/>
+        <!--CONTROL DE USUARIO PARA EL DNI-->
+        <uc:CampoDni x:Name="CustomDni" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,10,0,0"/>
+        <Label x:Name="LabelDireccion" ToolTip="Dirección del cliente" Content="Direccion" Grid.Column="0" Grid.Row="5" Margin="0,10,0,0"/>
+        <TextBox x:Name="TextBoxDireccion" ToolTip="Introduzca la dirección del nuevo cliente" Width="200" Grid.Column="1" Grid.Row="5" Margin="20,0,0,0" Height="24"/>
+        <Label x:Name="LabelFechaNacimiento" ToolTip="Fecha de nacimiento del cliente" Content="Fecha de nacimiento" Grid.Column="0" Grid.Row="6" Margin="0,10,0,0"/>
+        <DatePicker x:Name="DatePickerFechaNacimiento" ToolTip="Seleccione la fecha de nacimiento del nuevo cliente" DisplayDateEnd="{x:Static sys:DateTime.Now}" SelectedDate="{x:Static sys:DateTime.Now}" Width="200" Grid.Column="1" Grid.Row="6" Margin="20,0,0,0" Height="24"/>
+        <Button x:Name="BotonAceptar" ToolTip="Crear el nuevo cliente" Content="Añadir Cliente" Width="150" Grid.Column="1" Grid.Row="7" Margin="0,10,0,0" Click="AnadirCliente"/>
+    </Grid>
+</Window>
