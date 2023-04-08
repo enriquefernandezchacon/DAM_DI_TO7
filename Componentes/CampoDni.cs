@@ -4,7 +4,7 @@ using System.Net;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace DI04_Tarea_Fernandez_Chacon_EnriqueOctavio.Componentes
+namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.Componentes
 {
     /// <summary>
     /// LÓGICA DE INTERACCIÓN PARA EL CONTROL DEL DNI

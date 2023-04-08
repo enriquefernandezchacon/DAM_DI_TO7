@@ -1,9 +1,9 @@
-﻿using DI04_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio;
+﻿using DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
-namespace DI04_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio
+namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio
 {
     public class Clientes
     {

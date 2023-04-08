@@ -2,7 +2,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace DI04_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio
+namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio
 {
     public class Cliente : INotifyPropertyChanged, ICloneable, IDataErrorInfo
     {
