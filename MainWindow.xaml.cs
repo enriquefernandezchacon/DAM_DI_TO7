@@ -14,6 +14,10 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
         /*Los dos elementos con los que trabajaremos, la lista de clientes, y la lista de reservas*/
         private Reservas reservas;
         private Clientes clientes;
+
+        /// <summary>
+        /// Constructor de la ventana principal
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -27,19 +31,27 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
     
-        //Evento para click en nueva reserva
+        /// <summary>
+        /// Gestion del click en nueva reserva, se abre una nueva ventana para crear una nueva reserva
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MenuItem_Click_NuevaReserva(object sender, RoutedEventArgs e) {
             //Instancio la ventana de reserva, y paso por parametro la lógica de negocio
             WindowNuevaReserva window = new WindowNuevaReserva(clientes, reservas);
             //Establezco esta ventana como padre de la nueva
             window.Owner = this;
             //Oculto esta ventana
-            this.Hide();
+            Hide();
             //Muestro la nueva ventana
             window.Show();
         }
 
-        //Evento para borrar reservas
+        /// <summary>
+        /// Metodo que borra la reserva seleccionada en la tabla
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BorrarReserva_Click(object sender, RoutedEventArgs e)
         {
             //Compruebo si hay alguna reserva seleccionada
@@ -63,7 +75,11 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
             }
         }
 
-        //Evento para modificar una reserva
+        /// <summary>
+        /// Metodo para modificar una reserva, se abre una nueva ventana para modificar la reserva seleccionada
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ModificarReserva_Click(object sender, RoutedEventArgs e)
         {
             //Compruebo que haya alguna seleccionada
@@ -86,12 +102,20 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
             
         }
 
-        //Evento para salir
+        /// <summary>
+        /// Gestion del click en el boton salir, cierra la aplicacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MenuItem_Click_Salir(object sender, RoutedEventArgs e) {
-            this.Close();
+            Close();
         }
 
-        //Evento para el botón "Acerca De..."
+        /// <summary>
+        /// Metodo para mostrar el dialogo de "Acerca de"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MenuItem_ClickAcercaDe(object sender, RoutedEventArgs e) {
             //Creo la ventana
             WindowAcercaDe windowAcercaDe = new WindowAcercaDe();
@@ -100,11 +124,15 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
             //Establezco el titulo
             windowAcercaDe.Title = "Acerca De";
             //Oculto esta ventana y muestro la nueva
-            this.Hide();
+            Hide();
             windowAcercaDe.Show();
         }
 
-        //Evento para el botón "Anadir Cliente..."
+        /// <summary>
+        /// Metodo para mostrar el dialogo de "Añadir Cliente"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MenuItem_AnadirCliente(object sender, RoutedEventArgs e)
         {
             //Creo la ventana
@@ -118,16 +146,12 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
             windowAnadirCliente.Show();
         }
 
-        //Evento del botón reiniciar
+        /// <summary>
+        /// Metodo que reinicia el contenido de la aplicacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ReiniciarContenido(object sender, RoutedEventArgs e)
-        {
-            InicializarDatos();
-        }
-
-        /*Evento para crear los datos desde 0
-         * Me creo a mi mismo como cliente y creo una reserva del tipo Revision, 
-         * con seguro privado para el momento actual*/
-        private void InicializarDatos()
         {
             //Limpio los datos del negocio
             reservas.GetReservas().Clear();
@@ -140,7 +164,9 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
             reservas.AgregarReserva(r1);
         }
 
-        //Metodo para configurar el dataGrid
+        /// <summary>
+        /// Metodo que configura la tabla de reservas
+        /// </summary>
         private void CrearTabla()
         {
             //Establezco la fuente de datos
@@ -161,9 +187,11 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
             dgReservas.Columns[5].Header = "Seguro Privado";
         }
 
-        /*Metodo para actualizar el dataGrid cuando se produce un cambio de estado
-         * en la ventana, este es para cuando se produce una modificación de reserva, al volver a esta ventana, ObservableCollection
-         * no me cambiaba los datos hasta que clicaba en la tabla*/
+        /// <summary>
+        /// Metodo que se ejecuta cuando se muestra la ventana, se encarga de actualizar la tabla
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void VisibilidadChange(object sender, DependencyPropertyChangedEventArgs e)
         {
             dgReservas.Items.Refresh();

@@ -13,12 +13,18 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio
 
         public event NotifyCollectionChangedEventHandler? CollectionChanged;
 
+        /// <summary>
+        /// Constructor de la clase Reservas
+        /// </summary>
         public Reservas()
         {
             listado = new ObservableCollection<Reserva>();
         }
 
-        //Metodos de la lógica de negocio
+        /// <summary>
+        /// Metodo que permite agregar una reserva a la lista de reservas
+        /// </summary>
+        /// <param name="reserva">Reserva a añadir</param>
         public void AgregarReserva(Reserva reserva)
         {
             if (reserva != null)
@@ -28,16 +34,23 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio
             } 
         }
 
+        /// <summary>
+        /// Metodo para borra una reserva de la lista de reservas
+        /// </summary>
+        /// <param name="id">Id de la reserva en la BD</param>
         public void BorrarReserva(int id)
         {
-            Reserva reserva = listado.FirstOrDefault(r => r.Id == id);
+            Reserva? reserva = listado.FirstOrDefault(r => r.Id == id);
             if (reserva != null)
             {
                 listado.Remove(reserva);
             }
         } 
-        //Para modificar la reserva, reemplazo en la lista la reserva a modificar por un nuevo objeto del tipo Reserva
-        //con los nuevos datos
+        
+        /// <summary>
+        /// Metodo para modificar una reseva
+        /// </summary>
+        /// <param name="reservaModificada">La reserva ya modificada</param>
         public void ModificarReserva(Reserva reservaModificada)
         {
             if (reservaModificada != null)
@@ -48,6 +61,10 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio
             }
         }
 
+        /// <summary>
+        /// Metodo que devuelve una lista de reservas
+        /// </summary>
+        /// <returns></returns>
         public ObservableCollection<Reserva> GetReservas()
         {
             return listado;

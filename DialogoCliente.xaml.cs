@@ -1,19 +1,9 @@
 ﻿using DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio;
 using DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
 {
@@ -25,6 +15,11 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
         private Cliente cliente;
         private Clientes clientes;
         private int errores;
+
+        /// <summary>
+        /// Constructor del formulario de clientes
+        /// </summary>
+        /// <param name="clientes">Modulo para gestionar los clientes de la aplicación</param>
         public DialogoCliente(Clientes clientes)
         {
             InitializeComponent();
@@ -36,7 +31,11 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
             this.clientes = clientes;
         }
 
-        //Metodo de validacion del boton
+        /// <summary>
+        /// Método que gestiona los errores del formulario así como el conteo de los mismos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Validation_Error(object sender, ValidationErrorEventArgs e)
         {
             if (e.Action == ValidationErrorEventAction.Added)
@@ -51,25 +50,42 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
 
         }
 
-        //No hago comprobación, pues si el botón esta activo, es que los campos son correctos
+        /// <summary>
+        /// Evento del boton aceptar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BTAceptarClick(object sender, RoutedEventArgs e)
         {
             clientes.AgregarCliente(cliente);
             this.Close();
         }
 
+        /// <summary>
+        /// Evento del boton cancelar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BTCancelarClick(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-        //Cuando se cierra la ventana, se muestra la ventana padre
+        /// <summary>
+        /// Evento para mostrar el formulario principal al cerrar el formulario de clientes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Window_Closed(object sender, EventArgs e)
         {
             this.Owner.Show();
         }
 
-        //Comprobacion del nombre
+        /// <summary>
+        /// Gestion de los errores del campo nombre
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TextBoxNombre_LostFocus(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(TextBoxNombre.Text))
@@ -77,7 +93,12 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
                 MessageBox.Show("Debes completar el campo nombre", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-        //Comprobacion de los apellidos
+        
+        /// <summary>
+        /// Gestion de los errores del campo apellidos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TextBoxApellidos_LostFocus(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(TextBoxApellidos.Text))
@@ -85,7 +106,12 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
                 MessageBox.Show("Debes completar el campo apellido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-        //Comprobacion de telefono
+
+        /// <summary>
+        /// Gestion de los errores del campo telefono
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TextBoxTelefono_LostFocus(object sender, RoutedEventArgs e)
         {
             //Que no este vacío

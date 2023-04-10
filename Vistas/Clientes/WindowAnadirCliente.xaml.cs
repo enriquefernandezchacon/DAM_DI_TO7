@@ -159,7 +159,7 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes
         /// <param name="e">ELEMENTO REQUERIDO POR EL EVENTO</param>
         private void Window_Closed(object sender, EventArgs e)
         {
-            this.Owner.Show();
+            Owner.Show();
         }
     }
 }

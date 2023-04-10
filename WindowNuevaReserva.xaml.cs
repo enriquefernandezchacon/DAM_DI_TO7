@@ -19,7 +19,11 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
         private int numeroClientes;
         private bool modificar = false;
         
-        //Constructor para nueva reserv1a
+        /// <summary>
+        /// Constructor para crear reservas
+        /// </summary>
+        /// <param name="clientes"></param>
+        /// <param name="reservas"></param>
         public WindowNuevaReserva(Clientes clientes, Reservas reservas)
         {
             InitializeComponent();
@@ -33,7 +37,14 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
             this.DataContext = this.reserva;
             InicializarComponentes();
         }
-        //Constructor para modificar reservas
+        
+
+        /// <summary>
+        /// Constructor para modificar reservas
+        /// </summary>
+        /// <param name="clientes"></param>
+        /// <param name="reservas"></param>
+        /// <param name="reserva"></param>
         public WindowNuevaReserva(Clientes clientes, Reservas reservas, Reserva reserva)
         {
             InitializeComponent();
@@ -47,6 +58,9 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
             InicializarComponentes();
         }
 
+        /// <summary>
+        /// Metodo auxiliar para inicializar la vista
+        /// </summary>
         private void InicializarComponentes()
         {
             //Establecemos los objetos para los comboBox, tanto de clientes como los tipos de cita
@@ -82,19 +96,29 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
      
         }
 
-        //Evento boton cancelar
+        /// <summary>
+        /// Evento que gestiona el boton cancelar cerrando la ventana
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonCancelar_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
-        //Evento boton reservar
+        /// <summary>
+        /// Metodo que comprueba los datos introducidos por el usuario,
+        /// si son correctos, crea una reserva y la añade a la lista de reservas.
+        /// Si no, muestra un mensaje de error
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonReservar_Click(object sender, RoutedEventArgs e)
         {
             //creo variable flag, y de apoyo para el tiempo1
             bool centinela = true;
-            int hora = 0;
-            int minutos = 0;
+            int hora;
+            int minutos;
 
             //compruebo que la hora sea numerica
             if (!int.TryParse(tbHora.Text, out hora)) 
@@ -153,13 +177,22 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
                 }
             }
         }
-        //Al cerrar la ventana, se muestra la ventana padre
+       
+        /// <summary>
+        /// Evento que gestiona el cierre de la ventana, tras ello muestra el listado principal
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Window_Closed(object sender, EventArgs e)
         {
-            this.Owner.Show();
+            Owner.Show();
         }
 
-        //Click en nuevo cliente
+        /// <summary>
+        /// Metodo para gestionar el clic en nuevo cliente, crea una ventana de dialogo para crear un nuevo cliente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonNuevoCliente_Click(object sender, RoutedEventArgs e)
         {
             //Creo la ventana
@@ -168,9 +201,14 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
             dialogoCliente.Owner = this;
             //Muestro la ventana y oculto esta
             dialogoCliente.Show();
-            this.Hide();
+            Hide();
         }
-        //Metodo de validacion para establecer activo o no el boton 
+        
+        /// <summary>
+        /// Metodo para la gestion de errores en los campos del formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Validation_Error(object sender, ValidationErrorEventArgs e)
         {
             if (e.Action == ValidationErrorEventAction.Added)
@@ -179,13 +217,17 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
                 errores--;
 
             if (errores == 0)
-                this.btReservar.IsEnabled = true;
+                btReservar.IsEnabled = true;
             else
-                this.btReservar.IsEnabled = false;
+                btReservar.IsEnabled = false;
 
         }
 
-        //Metodo para ver si se ha creado un cliente, y en ese caso, seleccionarlo en ese instante
+        /// <summary>
+        /// Metodo que selecciona el nuevo cliente de forma automatica
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void VisibilidadChange(object sender, DependencyPropertyChangedEventArgs e)
         {
             //Si hay mas clientes ahora que antes, es que se ha añadido un nuevo cliente

@@ -20,6 +20,9 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
     /// </summary>
     public partial class WindowAcercaDe : Window
     {
+        /// <summary>
+        /// Constructor de la ventana
+        /// </summary>
         public WindowAcercaDe()
         {
             InitializeComponent();
@@ -27,10 +30,14 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
-        //Al cerrar esta ventana, se vuelve visible la ventana padre
+        /// <summary>
+        /// Gestiona el cierre de la ventana y muestra la ventana principal
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Window_Closed(object sender, EventArgs e)
         {
-            this.Owner.Show();
+            Owner.Show();
         }
     }
 
