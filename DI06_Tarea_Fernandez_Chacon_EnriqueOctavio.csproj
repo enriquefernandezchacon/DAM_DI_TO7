@@ -18,4 +18,10 @@
     <Page Remove="Patron de comprobacion\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Manuales\DI_TO6.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

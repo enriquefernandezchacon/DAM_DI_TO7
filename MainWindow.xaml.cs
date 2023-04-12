@@ -2,7 +2,9 @@
 using DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio;
 using DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes;
 using System;
+using System.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -30,7 +32,40 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
             //Mostramos la ventana nueva en el centro de la pnatalla
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
-    
+
+        /// <summary>
+        /// Metodo para crear datos de prueba
+        /// </summary>
+        private void InicializarDatos()
+        {
+            //Limpio los datos del negocio
+            reservas.GetReservas().Clear();
+            clientes.GetClientes().Clear();
+            //Me creo como cliente y lo agrego a la lógica
+            Cliente c1 = new Cliente("Enrique Octavio", "Fernandez Chacon", "656656656");
+            clientes.AgregarCliente(c1);
+            //Creo la cita y la agrego a la lógica
+            Reserva r1 = new Reserva(c1, DateTime.Now, TipoCita.Revision, true);
+            reservas.AgregarReserva(r1);
+        }
+
+        //MenuItem_ClickAyudaCHM
+        private void MenuItem_ClickAyudaCHM(object sender, RoutedEventArgs e)
+        {
+            string chmFileName = "Manuales\\DI_TO6.chm";
+            string chmFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, chmFileName);
+
+            Process.Start(new ProcessStartInfo(chmFilePath) { UseShellExecute = true });
+        }
+
+        private void MenuItem_ClickAyudaTXT(object sender, RoutedEventArgs e)
+        {
+            string txtFileName = "Manuales\\DI_TO6.txt";
+            string txtFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, txtFileName);
+
+            Process.Start(new ProcessStartInfo(txtFilePath) { UseShellExecute = true });
+        }
+
         /// <summary>
         /// Gestion del click en nueva reserva, se abre una nueva ventana para crear una nueva reserva
         /// </summary>
