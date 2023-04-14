@@ -19,7 +19,7 @@
             </MenuItem>
             <MenuItem Header="Ayuda" ToolTip="Menú de ayuda" >
                 <MenuItem Header="Ayuda CHM..." Click="MenuItem_ClickAyudaCHM" ToolTip="Mostrar el manual en formato CHM" />
-                <MenuItem Header="Ayuda TXT..." Click="MenuItem_ClickAyudaTXT" ToolTip="Mostrar el manual en formato TXT" />
+                <MenuItem Header="Documentacion..." Click="MenuItem_ClickDocumentacion" ToolTip="Mostrar la documentacion del codigo de la aplicacion" />
                 <MenuItem Header="Acerca De..." Click="MenuItem_ClickAcercaDe" ToolTip="Mostrar ventana con información de acerca de" />
             </MenuItem>
         </Menu>

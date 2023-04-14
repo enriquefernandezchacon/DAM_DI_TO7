@@ -49,7 +49,11 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
             reservas.AgregarReserva(r1);
         }
 
-        //MenuItem_ClickAyudaCHM
+        /// <summary>
+        /// Metodo para mostrar la ayuda
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MenuItem_ClickAyudaCHM(object sender, RoutedEventArgs e)
         {
             string chmFileName = "Manuales\\DI_TO6.chm";
@@ -58,9 +62,14 @@ namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
             Process.Start(new ProcessStartInfo(chmFilePath) { UseShellExecute = true });
         }
 
-        private void MenuItem_ClickAyudaTXT(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Metodo para mostrar la documentacion del codigo de la aplicacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MenuItem_ClickDocumentacion(object sender, RoutedEventArgs e)
         {
-            string txtFileName = "Manuales\\DI_TO6.txt";
+            string txtFileName = "Manuales\\Doxygen\\html\\index.html";
             string txtFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, txtFileName);
 
             Process.Start(new ProcessStartInfo(txtFilePath) { UseShellExecute = true });

@@ -22,6 +22,276 @@
     <None Update="Manuales\DI_TO6.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Manuales\Doxygen\html\annotated.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\bc_s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\bc_sd.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\bdwn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\classes.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_app.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_app.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_dialogo_cliente-members.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_dialogo_cliente.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_dialogo_cliente.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_main_window-members.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_main_window.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_main_window.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_window_acerca_de-members.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_window_acerca_de.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_window_acerca_de.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_window_nueva_reserva-members.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_window_nueva_reserva.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_window_nueva_reserva.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\closed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\dir_2fd0728c3d99480cb5bc4ef988422aeb.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\dir_551deac9788ea1c1531e3283a7769828.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\dir_cbdef2cca358b4a8c866065356534331.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\doc.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\docd.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\doxygen.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\doxygen.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\dynsections.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\folderclosed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\folderopen.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\functions.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\functions_func.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\hierarchy.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\index.hhc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\index.hhk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\index.hhp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\jquery.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\logo.jfif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\menu.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\menudata.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\namespaces.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\namespace_d_i06___tarea___fernandez___chacon___enrique_octavio.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\nav_f.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\nav_fd.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\nav_g.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\nav_h.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\nav_hd.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\open.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\splitbar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\splitbard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\sync_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\sync_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\tabs.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\tab_a.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\tab_ad.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\tab_b.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\tab_bd.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\tab_h.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\tab_hd.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\tab_s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\html\tab_sd.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\annotated.tex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_app.eps">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_app.tex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_dialogo_cliente.eps">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_dialogo_cliente.tex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_main_window.eps">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_main_window.tex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_window_acerca_de.eps">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_window_acerca_de.tex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_window_nueva_reserva.eps">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_window_nueva_reserva.tex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\doxygen.sty">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\hierarchy.tex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\logo.jfif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\longtable_doxygen.sty">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\make.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\Makefile">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\namespaces.tex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\namespace_d_i06___tarea___fernandez___chacon___enrique_octavio.tex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\refman.tex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\latex\tabu_doxygen.sty">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\rtf\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_app.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\rtf\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_dialogo_cliente.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\rtf\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_main_window.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\rtf\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_window_acerca_de.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\rtf\class_d_i06___tarea___fernandez___chacon___enrique_octavio_1_1_window_nueva_reserva.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\rtf\logo.jfif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Manuales\Doxygen\rtf\refman.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
