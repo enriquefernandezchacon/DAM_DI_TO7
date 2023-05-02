@@ -12,13 +12,13 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio
     /// </summary>
     public partial class WindowNuevaReserva : Window
     {
-        private Clientes clientes;
-        private Reservas reservas;
-        private Reserva reserva;
+        private readonly Clientes clientes;
+        private readonly Reservas reservas;
+        private readonly Reserva reserva;
         private int errores;
         private int numeroClientes;
-        private bool modificar = false;
-        
+        private readonly bool modificar = false;
+
         /// <summary>
         /// Constructor para crear reservas
         /// </summary>
@@ -33,11 +33,11 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio
             this.clientes = clientes;
             this.reservas = reservas;
             //Creamos una reserva y la establecemos como contexto
-            this.reserva = new Reserva();
-            this.DataContext = this.reserva;
+            reserva = new Reserva();
+            DataContext = reserva;
             InicializarComponentes();
         }
-        
+
 
         /// <summary>
         /// Constructor para modificar reservas
@@ -53,7 +53,7 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio
             this.reservas = reservas;
             //Diferencia en que la reserva asignada al contexto, es la pasado por parametro
             this.reserva = reserva;
-            this.DataContext = this.reserva;
+            DataContext = this.reserva;
             modificar = true;
             InicializarComponentes();
         }
@@ -67,7 +67,7 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio
             cbClientes.ItemsSource = clientes.GetClientes();
             cbMotivo.ItemsSource = Enum.GetValues(typeof(TipoCita)).Cast<TipoCita>();
             //Asignamos a la variable la cantidad de cliente
-            numeroClientes = clientes.GetClientes().Count();
+            numeroClientes = clientes.GetClientes().Count;
 
             //Comprobamos si esta modificando o creando una reserva
             if (modificar)
@@ -78,7 +78,7 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio
                 tbHora.Text = reserva.Fecha.Hour.ToString();
                 tbMinutos.Text = reserva.Fecha.Minute.ToString();
                 btReservar.Content = "Modificar";
-                this.Title = "Modificar Reserva";
+                Title = "Modificar Reserva";
                 lTitulo.Content = "Modificar Reserva";
             }
             else
@@ -93,7 +93,7 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio
                 reserva.TipoCita = TipoCita.Revision;
                 tbHora.Text = "10";
             }
-     
+
         }
 
         /// <summary>
@@ -117,17 +117,15 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio
         {
             //creo variable flag, y de apoyo para el tiempo1
             bool centinela = true;
-            int hora;
-            int minutos;
 
             //compruebo que la hora sea numerica
-            if (!int.TryParse(tbHora.Text, out hora)) 
+            if (!int.TryParse(tbHora.Text, out int hora))
             {
                 centinela = false;
                 MessageBox.Show("El campo hora debe ser numérico", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             //compruebo que los minutos sean numericos
-            if (!int.TryParse(tbMinutos.Text, out minutos))
+            if (!int.TryParse(tbMinutos.Text, out int minutos))
             {
                 centinela = false;
                 MessageBox.Show("El campo minutos debe ser numérico", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -138,20 +136,17 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio
                 MessageBox.Show("Valor del campo minutos fuera de rango", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            if (centinela)
+            //Compruebo el rango de las horas, en este caso, se aceptan reservas de 10:00 a 23:59
+            if (centinela && (hora < 10 || hora > 23))
             {
-                //Compruebo el rango de las horas, en este caso, se aceptan reservas de 10:00 a 23:59
-                if (hora < 10 || hora > 23)
-                {
-                    centinela = false;
-                    MessageBox.Show("El horario de reserva es de 10:00 a 23:59", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
+                centinela = false;
+                MessageBox.Show("El horario de reserva es de 10:00 a 23:59", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
             if (centinela)
             {
                 //Al validar los datos para la fecha, creo un nuevo objeto DateTime con los datos del formulario
-                DateTime fecha = new DateTime(reserva.Fecha.Year, reserva.Fecha.Month, reserva.Fecha.Day, Int32.Parse(tbHora.Text), Int32.Parse(tbMinutos.Text), 0);
+                DateTime fecha = new(reserva.Fecha.Year, reserva.Fecha.Month, reserva.Fecha.Day, Int32.Parse(tbHora.Text), Int32.Parse(tbMinutos.Text), 0);
                 //Condicion mia para reservar como minimo una hora en el futuro
                 if (DateTime.Compare(fecha, DateTime.Now.AddHours(1)) < 0)
                 {
@@ -163,21 +158,22 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio
                 {
                     //Si todo es correcto, asigno la fecha y el valor de seleccionado en los radioButton referidos al seguro
                     reserva.Fecha = fecha;
-                    reserva.Seguro = (bool) rbSi.IsChecked;
+                    reserva.Seguro = (bool)rbSi.IsChecked;
                     //Llamo al metodo que corresponda
                     if (modificar)
                     {
                         reservas.ModificarReserva(reserva);
-                    } 
+                    }
                     else
                     {
                         reservas.AgregarReserva(reserva);
                     }
-                    this.Close();
+
+                    Close();
                 }
             }
         }
-       
+
         /// <summary>
         /// Evento que gestiona el cierre de la ventana, tras ello muestra el listado principal
         /// </summary>
@@ -196,14 +192,16 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio
         private void ButtonNuevoCliente_Click(object sender, RoutedEventArgs e)
         {
             //Creo la ventana
-            DialogoCliente dialogoCliente = new DialogoCliente(clientes);
-            //Asigno este elemento como padre
-            dialogoCliente.Owner = this;
+            DialogoCliente dialogoCliente = new(clientes)
+            {
+                //Asigno este elemento como padre
+                Owner = this
+            };
             //Muestro la ventana y oculto esta
             dialogoCliente.Show();
             Hide();
         }
-        
+
         /// <summary>
         /// Metodo para la gestion de errores en los campos del formulario
         /// </summary>

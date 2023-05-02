@@ -8,7 +8,7 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio
         public int Id { get; set; }
         public Cliente Cliente { get; set; }
         public DateTime Fecha { get; set; }
-        public TipoCita TipoCita { get; set; }
+        public TipoCita? TipoCita { get; set; }
         public bool Seguro { get; set; }
 
         public string Error => throw new NotImplementedException();
@@ -18,34 +18,16 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio
             get
             {
                 string result = "";
-                if (columnName == "Fecha")
+
+                if (columnName == "TipoCita" && TipoCita == null)
                 {
-                    if (Fecha == null)
-                    {
-                        result = "El campo Fecha no debe ser nulo";
-                    }
+                    result = "El campo Tipo de cita no debe ser nulo";
                 }
-                if (columnName == "TipoCita")
+                if (columnName == "Cliente" && Cliente == null)
                 {
-                    if (TipoCita == null)
-                    {
-                        result = "El campo Tipo de cita no debe ser nulo";
-                    }
+                    result = "El campo cliente no debe ser nulo";
                 }
-                if (columnName == "Seguro")
-                {
-                    if (Seguro == null)
-                    {
-                        result = "El campo seguro no debe ser nulo";
-                    }
-                }
-                if (columnName == "Cliente")
-                {
-                    if (Cliente == null)
-                    {
-                        result = "El campo cliente no debe ser nulo";
-                    }
-                }
+
                 return result;
             }
         }
@@ -67,7 +49,7 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio
 
         public object Clone()
         {
-            return this.MemberwiseClone();
+            return MemberwiseClone();
         }
     }
 }
