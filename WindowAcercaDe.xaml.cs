@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
+namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio
 {
     /// <summary>
     /// Lógica de interacción para WindowAcercaDe.xaml

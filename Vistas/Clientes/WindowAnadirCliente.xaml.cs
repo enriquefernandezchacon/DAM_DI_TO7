@@ -1,5 +1,5 @@
-﻿using DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.Componentes;
-using DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.Extensiones;
+﻿using DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.Componentes;
+using DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.Extensiones;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
 
-namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes
+namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes
 {
     /// <summary>
     /// LÓGICA DE INTERACCIÓN PARA WINDOWANADIRCLIENTE.XAML

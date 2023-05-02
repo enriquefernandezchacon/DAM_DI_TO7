@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio
+namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio
 {
     public class Reserva : INotifyPropertyChanged, ICloneable, IDataErrorInfo
     {

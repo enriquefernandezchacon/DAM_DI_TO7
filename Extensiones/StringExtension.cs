@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.Extensiones
+namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.Extensiones
 {
     public static class StringExtension
     {

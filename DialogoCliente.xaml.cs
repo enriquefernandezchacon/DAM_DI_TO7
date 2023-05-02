@@ -1,11 +1,11 @@
-﻿using DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio;
-using DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio;
+﻿using DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio;
+using DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Negocio;
 using System;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace DI06_Tarea_Fernandez_Chacon_EnriqueOctavio
+namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio
 {
     /// <summary>
     /// Lógica de interacción para DialogoCliente.xaml

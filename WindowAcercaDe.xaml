@@ -1,9 +1,9 @@
-﻿<Window x:Class="DI06_Tarea_Fernandez_Chacon_EnriqueOctavio.WindowAcercaDe"
+﻿<Window x:Class="DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.WindowAcercaDe"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DI06_Tarea_Fernandez_Chacon_EnriqueOctavio"
+        xmlns:local="clr-namespace:DI07_Tarea_Fernandez_Chacon_EnriqueOctavio"
         mc:Ignorable="d"
         Closed="Window_Closed"
         Title="WindowAcercaDe" Height="180" Width="250">
