@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Net;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -42,7 +41,17 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.Componentes
         public CampoDni()
         {
             InitializeComponent();
-            this.DataContext = this;
+            DataContext = this;
+            EstadoBoton = Dni.Length > 7;
+        }
+
+        public CampoDni(bool test)
+        {
+            if (!test)
+            {
+                InitializeComponent();
+            }
+            DataContext = this;
             EstadoBoton = Dni.Length > 7;
         }
 
@@ -84,7 +93,7 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.Componentes
                     //ANTES DE MODIFICAR EL DNI, AUMENTO LA LONGITUD MAXIMA DEL TEXTBOX A 9 PARA QUE QUEPA LA LETRA
                     LongitudMaxima = 9;
                     Dni += control[dni % 23];
-                    Keyboard.ClearFocus();     
+                    Keyboard.ClearFocus();
                 }
             }
         }

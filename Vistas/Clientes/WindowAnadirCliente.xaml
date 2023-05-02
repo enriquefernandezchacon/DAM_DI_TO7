@@ -27,7 +27,7 @@
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Label x:Name="LabelNombre" ToolTip="Nombre del cliente" Content="Nombre" Grid.Column="0" Grid.Row="0"/>
-        <TextBox x:Name="TextBoxNombre"  ToolTip="Introduzca el nombre del nuevo cliente" Width="200" Grid.Column="1" Grid.Row="0" Margin="20,0,0,0" Height="24"/>
+        <TextBox x:Name="TextBoxNombre"  ToolTip="Introduzca el nombre del nuevo cliente" Width="200" Grid.Column="1" Grid.Row="0" Margin="20,0,0,0" Height="24" />
         <Label x:Name="LabelApellidos" ToolTip="Apellidos del cliente" Content="Apellidos" Grid.Column="0" Grid.Row="1" Margin="0,10,0,0"/>
         <TextBox x:Name="TextBoxApellidos" ToolTip="Introduzca los apellidos del nuevo cliente" Width="200" Grid.Column="1" Grid.Row="1" Margin="20,0,0,0" Height="24"/>
         <Label x:Name="LabelTelefono" ToolTip="Teléfono del cliente" Content="Teléfono" Grid.Column="0" Grid.Row="2" Margin="0,10,0,0"/>

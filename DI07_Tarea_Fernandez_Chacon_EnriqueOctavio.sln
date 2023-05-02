@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DI07_Tarea_Fernandez_Chacon_EnriqueOctavio", "DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.csproj", "{77043324-8020-44CE-825C-007793E487F9}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DI07_Tarea_Tests", "..\DI07_Tarea_Fernandez_Chacon_EnriqueOctavioTests1\DI07_Tarea_Tests.csproj", "{CC930CE9-070E-4C6A-A4A1-C5E8DBFA6FD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{77043324-8020-44CE-825C-007793E487F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77043324-8020-44CE-825C-007793E487F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77043324-8020-44CE-825C-007793E487F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC930CE9-070E-4C6A-A4A1-C5E8DBFA6FD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC930CE9-070E-4C6A-A4A1-C5E8DBFA6FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC930CE9-070E-4C6A-A4A1-C5E8DBFA6FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC930CE9-070E-4C6A-A4A1-C5E8DBFA6FD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

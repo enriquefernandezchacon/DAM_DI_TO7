@@ -9,7 +9,7 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.DTO.Dominio
         public Cliente Cliente { get; set; }
         public DateTime Fecha { get; set; }
         public TipoCita TipoCita { get; set; }
-        public Boolean Seguro { get; set; }
+        public bool Seguro { get; set; }
 
         public string Error => throw new NotImplementedException();
 

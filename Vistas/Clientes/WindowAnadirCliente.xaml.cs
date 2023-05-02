@@ -6,6 +6,7 @@ using System.Collections.Immutable;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes
 {
@@ -14,10 +15,45 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes
     /// </summary>
     public partial class WindowAnadirCliente : Window
     {
+        public TextBox MiTextBoxNombre
+        {
+            get { return TextBoxNombre; }
+            set { TextBoxNombre = value; }
+        }
+        public TextBox MiTextBoxApellidos
+        {
+            get { return TextBoxApellidos; }
+            set { TextBoxApellidos = value; }
+        }
+        public TextBox MiTextBoxTelefono
+        {
+            get { return TextBoxTelefono; }
+            set { TextBoxTelefono = value; }
+        }
+        public TextBox MiTextBoxMail
+        {
+            get { return TextBoxMail; }
+            set { TextBoxMail = value; }
+        }
+        public CampoDni MiCustomDni
+        {
+            get { return CustomDni; }
+            set { CustomDni = value; }
+        }
+        public TextBox MiTextBoxDireccion
+        {
+            get { return TextBoxDireccion; }
+            set { TextBoxDireccion = value; }
+        }
+        public DatePicker MiDatePickerFechaNacimiento
+        {
+            get { return DatePickerFechaNacimiento; }
+            set { DatePickerFechaNacimiento = value; }
+        }
         /// <summary>
         /// LISTA CON LOS ERRORES GENERAR POR EL FORMULARIO
         /// </summary>
-        private List<string> errores = new List<string>();
+        public List<string> errores = new List<string>();
         public WindowAnadirCliente()
         {
             InitializeComponent();
@@ -28,7 +64,7 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes
         /// </summary>
         /// <param name="sender">ELEMENTO REQUERIDO POR EL EVENTO</param>
         /// <param name="e">ELEMENTO REQUERIDO POR EL EVENTO</param>
-        private void AnadirCliente(object sender, RoutedEventArgs e)
+        public void AnadirCliente(object sender, RoutedEventArgs e)
         {
             //INICIALIZAMOS EL ARRAY DE ERRORES SIEMPRE QUE CLIQUEMOS EN EL BOTÓN PARA NO ACUMULARLOS
             errores = new();
@@ -49,7 +85,7 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes
         /// <summary>
         /// MÉTODO PARA GENERAR UN DIALOGO CON LOS ERRORES
         /// </summary>
-        private void MostrarErrores()
+        public void MostrarErrores()
         {
             //CABECERA
             StringBuilder sb = new StringBuilder();
@@ -69,7 +105,7 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes
         /// <summary>
         /// MÉTODO PARA PORCESAR LA PETICIÓN CUANDO LOS DATOS SON CORRECTOS
         /// </summary>
-        private void ProcesarPeticion()
+        public void ProcesarPeticion()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("Cliente añadido con éxito.");
@@ -83,7 +119,7 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes
             MessageBox.Show(sb.ToString(), "Cliente Añadido", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
-        private void ComprobarCampos()
+        public void ComprobarCampos()
         {
             // NOMBRE
             // COMPRUEBO QUE NO ESTE VACÍO
@@ -157,7 +193,7 @@ namespace DI07_Tarea_Fernandez_Chacon_EnriqueOctavio.Vistas.Clientes
         /// </summary>
         /// <param name="sender">ELEMENTO REQUERIDO POR EL EVENTO</param>
         /// <param name="e">ELEMENTO REQUERIDO POR EL EVENTO</param>
-        private void Window_Closed(object sender, EventArgs e)
+        public void Window_Closed(object sender, EventArgs e)
         {
             Owner.Show();
         }
